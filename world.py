@@ -71,7 +71,7 @@ class SimpleWorld_Spot_ATM(object):
         nInst : int
             Number of instruments.
             
-        dt : floast
+        dt : float
             Time step.    
             TODO: remove in favour of the timeline below
             
