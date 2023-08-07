@@ -82,7 +82,7 @@ In order to run the Deep Hedging, we require:
 
     * `tf_data` member which contains
 
-        * `tf_data['features']['market']`: core market data for the simulator. These are _not_ passed as features $s_t$ to the action model, because some of them such as $DH_t$ are forward looking.
+        * `tf_data['market']`: core market data for the simulator. These are _not_ passed as features $s_t$ to the action model, because some of them such as $DH_t$ are forward looking.
 
         * `tf_data['features']['per_step']`: features per time step $t$, e.g. current equity spot, prices for out options, time left, implied vol, values of the boundaries for actions.
         * `tf_data['features']['per_path']`: features per sample path. These are currently none as we are training for fixed instruments, but this can be extended accordingly.
