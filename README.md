@@ -65,7 +65,9 @@ Here
 * $DH_t$ denotes the vector of returns holding the $N$ hedging instruments available at time $t$ until some maximum expiry $T'\geq T$. 
     * If the $i$<b></b>th hedging instrument is spot $S$, then  $DH^{i}_t = S_T - S_t$ is simply the return of the equity from $t$ to $T$.
     * If the $i$<b></b>th instrument is an option $X$ with expiry $\tau$ then in the current implementation uses 
-    $$DH^{i}_{t} = X_{\tau} - V_t$$ 
+    ```math
+    DH^{i}_{t} = X_{\tau} - V_t
+    ```
     where $V$ is the market price at $t$ and where $X_\tau$ is the option's payoff at maturity. The maturity $T'$ is the maximum off all maturities of all hedging instruments.
     An alternative would be to use $DH^{i}_t := V_T - V_t$, e.g. using the market mid-price at time $T$ for the return calculation whenever $\tau> T$.
 
