@@ -109,9 +109,9 @@ Here are `world.tf_data` entries used by `gym.call()`:
 * `data['martket']['hedges'](:,M,N)`: returns of the hedges, i.e. the vector $DH_t:=H_{T'} - H_t$ for each time step. That means $H_t$ is the market price at time $t$, and $H_{T'}$ is payoff of the instrument at its expiry. In our examples we expand the timeline such that the expiry of all products is part of the market simulator. 
 
     For example, if $S_t$ is spot, $w_t^{(i)}$ is the option's implied volatility at $t$,  $x$ its time-to-maturity, and $k$ a relative strike, then
-$$
+```math
     H_t^{(i,t)} = \mathrm{BSCall}( S_t, w^{(i)}_t; T, kS_t ) \ \ \ \mathrm{and} \ \ \ H_{T'}^{(i,t)} = ( S_{t+x} - kS_t )^+
-$$
+```
 
 * `data['martket']['cost'](:,M,N)`: cost $\gamma_t$ of trading the hedges in $t$ for proportional cost $c_t(a) = \gamma_t\cdot |a|$.  
 More advanced implementations allow to pass the cost function itself as a tensorflow model.
