@@ -25,7 +25,7 @@ The **agent** in our problem setup is the functional $a$ which maps the current 
 
 ### Initial Delta
 
-The action at time zero is actually given by $a_0$ from the network described above plus an initial delta $a^\mathrm{init}$. The reason for this is that unless the portfolio $Z_T$ provided already contains the initial hedge, this hedge will look very different then subsequent hedges. Therefore, it is easier to train an additional $a^\mathrm{init}$. 
+The action at time zero is actually given by $a_0$ from the network described above plus an initial delta $a^\mathrm{init}$. The reason for this is that unless the portfolio $Z_T$ provided already contains the initial hedge, this hedge will look very different than subsequent hedges. Therefore, it is easier to train an additional $a^\mathrm{init}$. 
 
 ### Recurrence
 
