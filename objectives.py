@@ -90,7 +90,7 @@ class MonetaryUtility(tf.keras.Model):
         ----------
             data : dict
                 A dictrionary of tensors with all features available
-                at time zero. All tensors mus thave dimension 2.
+                at time zero. All tensors must thave dimension 2.
                 Expects
                     features_time_0 : all features available at time zero (see comments in the class description)
                     payoff          : [nSamples,] terminal payoff
